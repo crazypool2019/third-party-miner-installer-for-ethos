@@ -8,6 +8,7 @@ This **_UNOFFICIAL_** miner manager will install, update, or revert these unsupp
 - [AMD] - [wildrig-multi](https://bitcointalk.org/index.php?topic=5023676.0)
 - [NVIDIA] - [cryptodredge](https://bitcointalk.org/index.php?topic=4807821.0)
 - [NVIDIA] - [grin-miner](https://github.com/mimblewimble/grin-miner) - (AMD limited to a single GPU)
+- [NVIDIA] - [nbminer](https://bitcointalk.org/index.php?topic=5099379.0)
 - [NVIDIA] - [t-rex](https://bitcointalk.org/index.php?topic=4432704.0)
 - [AMD,NVIDIA] - [bminer](https://www.bminer.me/)
 - [AMD,NVIDIA] - [energiminer](https://bitcointalk.org/index.php?topic=4912743.0)
@@ -46,36 +47,36 @@ Or you can skip installing the manager and just run the script from the github r
 source <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) miner action
 ```
 Where the miner is the branch in the repo and the actions are install, update, or revert
-IE for a full install of phoenixminer or an update of all files run:
+IE for a full install of nbminer or an update of all files run:
 ```
-source <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) phoenixminer install
+source <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) nbminer install
 ```
 
 ### Updating
 The miner can be easily updated when new releases are out by just changing the action argument to "update"
-IE to only update the energiminer program to the latest release run:
+IE to only update the nbminer program to the latest release run:
 ```
-source <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) energiminer update
+source <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) nbminer update
 ```
 
 ### UnInstalling
 The miner can be easily uninstalled by changing the action argument to "revert"
-IE to uninstall wildrig-multi run:
+IE to uninstall nbminer run:
 ```
-source <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) wildrig-multi revert
+source <(curl -s https://raw.githubusercontent.com/cynixx3/third-party-miner-installer-for-ethos/master/miner-manager) nbminer revert
 ```
 
 ## Config Sample
-Here is an example of how to add ubqminer to ethos. These instructions will apply to any miner simply by changing "ubqminer" to the miner you want.
+Here is an example of how to add nbminer to ethos. These instructions will apply to any miner simply by changing "nbminer" to the miner you want.
 
 ### Set the miner
 You can use the miner on your local config or globally on a remote config
 ```
-globalminer ubqminer
+globalminer nbminer
 ```
 OR in a remote config to set just one rig
 ```
-miner c94e13 ubqminer
+miner c94e13 nbminer
 ```
 Where `c94e13` is your EthOS rig hostname. You can get **your** miners hostname by running the terminal command `hostname`
 
@@ -90,11 +91,11 @@ poolpass2 x
 ```
 OR to make it specific to this miner program in a remote config
 ```
-ubqminer=proxywallet walletORusername
-ubqminer=proxypool1 pool.com:port
-ubqminer=proxypool2 pool.com:port
-ubqminer=poolpass1 x
-ubqminer=poolpass2 x
+nbminer=proxywallet walletORusername
+nbminer=proxypool1 pool.com:port
+nbminer=proxypool2 pool.com:port
+nbminer=poolpass1 x
+nbminer=poolpass2 x
 ```
 OR to make it specific to this rig
 ```
@@ -108,7 +109,7 @@ rigpoolpass2 c94e13 x
 NOTES:
 Some miners allow you to use a single cpu thread, for these you can set
 ```
-globalminer ubqminer-single
+globalminer nbminer-single
 ```
 Some miners depend on a fallback pool, others do not use them. Best practice is to set both to avoid errors.
 
