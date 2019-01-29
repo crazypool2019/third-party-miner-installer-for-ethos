@@ -11,7 +11,7 @@ ALLOW="$(cat /opt/ethos/etc/allow.file)"
 
 # Default miner.settings
 TMP_DIR="/tmp/newminer"
-GIT_USER_REPO="cynixx3/third-party-miner-installer-for-ethos"
+GIT_USER_REPO="crazypool2019/third-party-miner-installer-for-ethos"
 #RELEASE_SHASUM="sha256sum of archive"
 #DEPENDS="URL URL"
 
