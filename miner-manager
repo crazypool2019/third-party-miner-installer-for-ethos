@@ -97,7 +97,7 @@ if [ "${VER//./}" -ne 133 ] ; then
 fi
   echo "Download and unpack files needed by ethOS"
 #todo add ethos version checking
-  git clone https://github.com/cynixx3/third-party-miner-installer-for-ethos.git -b "$MINER_BRANCH"
+  git clone https://github.com/crazypool2019/third-party-miner-installer-for-ethos.git -b "$MINER_BRANCH"
 
   if [ -f "$TMP_DIR/third-party-miner-installer-for-ethos/opt/ethos/$MINER_BRANCH.stub.conf" ] ; then
     mkdir -p "$TMP_DIR/home/ethos/"
